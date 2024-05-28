@@ -20,7 +20,7 @@ def execute_vector_index(docs, apikey):
 
 
 def execute_query(query, apikey):
-    llm = get_opneai_llm_object()
+    llm = get_opneai_llm_object(api_key=apikey)
     embeddings = get_open_ai_embeddings(apikey)
     vector_index = get_faiss_vector_index_from_local("faiss_store", embeddings)
     chain = get_qa_chain(llm, vector_index)

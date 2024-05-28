@@ -11,8 +11,8 @@ from langchain_openai import OpenAIEmbeddings
 load_dotenv()
 
 
-def get_opneai_llm_object(temperature=0.9, max_tokens=500):
-    llm = OpenAI(temperature=temperature, max_tokens=max_tokens)
+def get_opneai_llm_object(api_key=None, temperature=0.9, max_tokens=500):
+    llm = OpenAI(openai_api_key=api_key, temperature=temperature, max_tokens=max_tokens)
     return llm
 
 
